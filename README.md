@@ -1,6 +1,6 @@
-# KPChain
+# AvatarX
 
-KPChain is a decentralized AI Data Network.
+AvatarX is a public blockchain network for personalized artificial intelligence applications.
 
 ## QuickStart
 

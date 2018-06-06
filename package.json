@@ -1,7 +1,7 @@
 {
-  "name": "kpchain",
+  "name": "avatarx",
   "version": "1.0.0",
-  "description": "KPChain is an flexible, efficient, safe and decentralized application platform.",
+  "description": "AvatarX is a public blockchain network for personalized artificial intelligence applications.",
   "private": true,
   "dependencies": {
     "bignumber": "https://github.com/AschPlatform/bignumber/tarball/master",

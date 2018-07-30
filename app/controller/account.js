@@ -1,19 +1,17 @@
-'use strict'
 
-const Controller = require('./base')
+const Controller = require('./base');
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = 'hi, KPChain'
+    this.ctx.body = 'Hi, AvatarX';
   }
 
   async newAccount() {
-    const { ctx, service, helper } = this
-    const payload = ctx.request.body || {}
-    const { data, message, code } = await service.account.createNewAccount(payload)
-    console.log(data, message, code)
-    this.success(data, message, code)
+    const { ctx, service } = this;
+    const payload = ctx.request.body || {};
+    const account = await service.account.createNewAccount(payload);
+    this.success(account);
   }
 }
 
-module.exports = HomeController
+module.exports = HomeController;

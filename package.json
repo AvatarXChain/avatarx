@@ -3,11 +3,23 @@
   "version": "1.0.0",
   "description": "AvatarX is a public blockchain network for personalized artificial intelligence applications.",
   "private": true,
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-kpchain",
+    "stop": "egg-scripts stop --title=egg-server-kpchain",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
   "dependencies": {
-    "bignumber": "https://github.com/AschPlatform/bignumber/tarball/master",
+    "bignumber.js": "^7.2.1",
     "bitcore-mnemonic": "^1.5.0",
-    "crypto": "^1.0.1",
-    "egg": "^2.2.1",
+    "egg": "latest",
+    "egg-pg": "^0.0.5",
     "egg-scripts": "^2.5.0",
     "sodium": "^2.0.3"
   },
@@ -25,18 +37,6 @@
   },
   "engines": {
     "node": ">=8.9.0"
-  },
-  "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-kpchain",
-    "stop": "egg-scripts stop --title=egg-server-kpchain",
-    "dev": "egg-bin dev",
-    "debug": "egg-bin debug",
-    "test": "npm run lint -- --fix && npm run test-local",
-    "test-local": "egg-bin test",
-    "cov": "egg-bin cov",
-    "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod"
   },
   "ci": {
     "version": "8"

@@ -1,4 +1,3 @@
-'use strict';
 
 module.exports = appInfo => {
   const config = exports = {};
@@ -8,6 +7,29 @@ module.exports = appInfo => {
 
   // add your config here
   config.middleware = [];
+
+
+  exports.pg = {
+    // database configuration
+    client: {
+      // host
+      host: '127.0.0.1',
+      // port
+      port: '5432',
+      // username
+      user: 'postgres',
+      // password
+      password: 'password',
+      // database
+      database: 'avatarx',
+    },
+    // load into app, default is open
+    app: true,
+    // load into agent, default is close
+    agent: false,
+    // use pool or client, default is true for pool
+    pool: true,
+  };
 
   return config;
 };

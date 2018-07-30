@@ -1,4 +1,4 @@
-var basex = require('./base-x.js')
-var ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+const basex = require('./base-x.js');
+const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 
-module.exports = basex(ALPHABET)
+module.exports = basex(ALPHABET);

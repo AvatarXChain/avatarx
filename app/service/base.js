@@ -1,4 +1,3 @@
-'use strict';
 const { Service } = require('egg');
 
 class BaseService extends Service {

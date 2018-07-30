@@ -23,6 +23,10 @@ $ npm start
 $ npm stop
 ```
 
+### Database
+usr: postgres
+pwd: password
+
 ### npm scripts
 
 - Use `npm run lint` to check code style.

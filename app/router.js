@@ -1,4 +1,3 @@
-'use strict';
 
 const VERSION = 'v1';
 
@@ -17,4 +16,4 @@ module.exports = app => {
   // account
   router.get('/account/new', controller.account.newAccount);
 
-}
+};

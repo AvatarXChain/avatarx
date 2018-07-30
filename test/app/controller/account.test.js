@@ -1,7 +1,7 @@
 
 const { app, assert } = require('egg-mock/bootstrap');
 
-describe('test/app/controller/home.test.js', () => {
+describe('test/app/controller/account.test.js', () => {
 
   it('should assert', function* () {
     const pkg = require('../../../package.json');
@@ -11,9 +11,9 @@ describe('test/app/controller/home.test.js', () => {
     // yield ctx.service.xx();
   });
 
-  it('should GET /', () => {
+  it('should GET /account/new', () => {
     return app.httpRequest()
-      .get('/')
+      .get('/account/new')
       .expect('Hi, AvatarXChain')
       .expect(200);
   });

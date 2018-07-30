@@ -1,9 +1,15 @@
-'use strict';
 
 const sodium = require('sodium').api;
 
 module.exports = {
-  MakeKeypair: function(hash) {
+  makeKeypair(hash) {
+    const keypair = sodium.crypto_sign_seed_keypair(hash);
+    return {
+      publicKey: keypair.publicKey,
+      privateKey: keypair.secretKey,
+    };
+  },
+  MakeKeyPair(hash) {
     const keypair = sodium.crypto_sign_seed_keypair(hash);
     return {
       publicKey: keypair.publicKey,
@@ -11,11 +17,11 @@ module.exports = {
     };
   },
 
-  Sign: function(hash, keypair) {
+  Sign(hash, keypair) {
     return sodium.crypto_sign_detached(hash, Buffer.from(keypair.privateKey, 'hex'));
   },
 
-  Verify: function(hash, signatureBuffer, publicKeyBuffer) {
+  Verify(hash, signatureBuffer, publicKeyBuffer) {
     return sodium.crypto_sign_verify_detached(signatureBuffer, hash, publicKeyBuffer);
   },
 };

@@ -1,4 +1,3 @@
-'use strict';
 
 const { Controller } = require('egg');
 
@@ -15,12 +14,9 @@ class BaseController extends Controller {
     };
   }
 
-  success(data = '', message = 'success', code = 1) {
-    this.ctx.body = {
-      data,
-      code,
-      message,
-    };
+  success(data) {
+    Object.assign(data, { success: true });
+    this.ctx.body = data;
   }
 
   page(data = '', pagination = {}, message = 'success', code = 1) {
@@ -37,4 +33,5 @@ class BaseController extends Controller {
     this.ctx.throw(404, message);
   }
 }
+
 module.exports = BaseController;

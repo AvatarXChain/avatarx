@@ -5,15 +5,8 @@ module.exports = {
   parserOptions: {
     sourceType: 'module'
   },
-  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
-  // required to lint *.vue files
-  plugins: [
-    'html'
-  ],
+  extends: 'eslint-config-egg',
   globals: {
-    'Date': true,
-    'document': true,
   },
   // add your custom rules here
   'rules': {

@@ -6,10 +6,10 @@ class HomeController extends Controller {
     this.ctx.body = 'Hi, AvatarX';
   }
 
-  async newAccount() {
+  async createAccount() {
     const { ctx, service } = this;
     const payload = ctx.request.body || {};
-    const account = await service.account.createNewAccount(payload);
+    const account = await service.account.createAccountByMnemonic(payload);
     this.success(account);
   }
 }

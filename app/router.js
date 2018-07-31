@@ -1,5 +1,5 @@
 
-const VERSION = 'v1';
+// const VERSION = 'v1';
 
 /**
  * @param {Egg.Application} app - egg application
@@ -9,11 +9,10 @@ module.exports = app => {
   router.get('/', controller.home.index);
 
   // peer
-  router.get('/peer', controller.peer.getPeers);
+  router.get('/peers', controller.peer.getPeers);
   router.get('/peer/version', controller.peer.version);
-  router.get('/peer/get', controller.peer.getPeer);
 
   // account
-  router.get('/account/new', controller.account.newAccount);
+  router.post('/account/create', controller.account.createAccount);
 
 };

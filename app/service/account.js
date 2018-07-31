@@ -14,7 +14,7 @@ class AccountService extends Service {
     // this.Config = this.app.config
   }
 
-  async createNewAccount(payload) {
+  async createAccountByMnemonic(payload) {
     let ent = Number(payload.ent);
 
     if ([ 128, 256, 384 ].indexOf(ent) === -1) {

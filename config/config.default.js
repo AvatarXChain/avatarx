@@ -6,8 +6,12 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1526387024272_6653';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = [ 'errorHandler' ];
 
+  // 安全设置 https://eggjs.org/zh-cn/core/security.htm
+  exports.security = {
+    csrf: false,
+  };
 
   exports.pg = {
     // database configuration

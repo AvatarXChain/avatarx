@@ -4,9 +4,7 @@ AvatarX is a public blockchain network for personalized artificial intelligence 
 
 ## QuickStart
 
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
+see [egg docs](https://eggjs.org) for more detail.
 
 ### Development
 
@@ -24,14 +22,12 @@ $ npm stop
 ```
 
 ### Database
-usr: postgres
-pwd: password
+
+usr: postgres pwd: password
 
 ### npm scripts
 
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
+* Use `npm run lint` to check code style.
+* Use `npm test` to run unit test.
+* Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
 
-
-[egg]: https://eggjs.org
